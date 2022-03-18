@@ -1,0 +1,8 @@
+svg rect {
+    fill: white;
+    mask: url(#mask);
+}
+
+svg > rect {
+    fill: white;
+}

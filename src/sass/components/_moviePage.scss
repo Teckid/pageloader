@@ -1,0 +1,220 @@
+.mediaPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 170vh;
+    position: absolute;
+    background-color: #0c0c0c;
+
+    .label {
+        color: #dfdbe6;
+        position: absolute;
+        font-size: 2.5rem;
+        z-index: 101;
+        left: 10rem;
+    }
+
+    .featuredLabel {
+        top: 103rem;
+    }
+
+    .brandListLabel {
+        top: 70rem;
+    }
+}
+
+.highlightContainer {
+    display: flex;
+    width: 90vw;
+    height: 60vh;
+    position: absolute;
+    top: 8rem;
+    left: 10rem;
+    background-color: #1b1b1b;
+    border: 0.2rem solid #ffffff13;
+    object-fit: contain;
+    overflow: hidden;
+
+    .highlightInfoContainer {
+        position: absolute;
+        left: -11rem;
+        bottom: -.5rem;
+        height: 50%;
+        width: 50%;
+        transform: skew(15deg);
+        border-radius: 0px 50px 0px 0px;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
+        border: .2rem solid rgba(255, 255, 255, .03);
+        backdrop-filter: blur(5px);
+        z-index: 100;
+
+        .hightlightInfoTextWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            transform: skew(-15deg);
+            position: absolute;
+            left: 15rem;
+            bottom: 10rem;
+
+            .bannerTitle {
+                color: white;
+                position: absolute;
+                font-size: 3rem;
+                z-index: 100;
+                top: -5rem;
+                left: 0rem;
+            }
+
+            .highlightInfoText {
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .hightlightBanner {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+}
+
+.mediaList {
+    display: flex;
+    overflow-x: scroll;
+    width: 90vw;
+    height: 54vh;
+    position: absolute;
+    z-index: 100;
+    bottom: 5rem;
+
+    .mediaWrapper {
+        .media {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 35.5rem;
+            height: 100%;
+            color: white;
+            border: 0.3rem solid transparent;
+            object-fit: cover;
+            border: 0.2rem solid #ffffff13;
+            margin-right: 0.75rem;
+            background-color: #1b1b1b;
+
+            .mediaPosters {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .mediaDetails {
+                background: linear-gradient(#ffffff00, #0c0c0ce8 90%);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+
+                .mediaTitle {
+                    font-size: 2rem;
+                    position: absolute;
+                    bottom: 2rem;
+                    left: 6rem;
+                }
+                .linebreake {
+                    font-size: 2rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 6rem;
+                }
+
+                .mediaButton {
+                    position: absolute;
+                    border-radius: 25px;
+                    width: 4rem;
+                    height: 4rem;
+                    background-color: #0c0c0c;
+                    bottom: 1rem;
+                    left: 1rem;
+                    border: 0.2rem solid #ffffff;
+                    color: white;
+                }
+            }
+
+            .hideMediaDetails {
+                display: none;
+            }
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.mediaListOptimizedForSearch {
+    bottom: 20rem;
+}
+
+.brandList {
+    display: flex;
+    overflow-x: scroll;
+    width: 90vw;
+    height: 20vh;
+    position: absolute;
+    z-index: 100;
+    bottom: 70rem;
+
+    .brandWrapper {
+        .brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            width: 26.4rem;
+            height: 100%;
+            color: white;
+            border: 0.2rem solid #ffffff13;
+            background-color: #1b1b1b;
+            margin-right: 0.75rem;
+
+            .brandIcon {
+                max-width: 90%;
+                max-height: 90%;
+                overflow: hidden;
+            }
+
+            .brandDetails {
+                background: linear-gradient(#ffffff00, #0c0c0ce8 90%);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+
+                .brandTitle {
+                    font-size: 2rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
+                }
+            }
+
+            .hideBrandDetails {
+                display: none;
+            }
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,93 @@
+.profilePage {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(30px);
+    z-index: -10;
+    bottom: 0;
+
+    .charakterContainer {
+        display: flex;
+        position: absolute;
+        width: 40vw;
+        height: 100vh;
+        background: linear-gradient(rgba(255,255,255, 0.05) 20%, rgba(0, 0, 0, .2));
+        backdrop-filter: blur(80px);
+        bottom: 0;
+    }
+
+    .userRelatedDataContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 35vw;
+        height: 30vh;
+        position: absolute;
+        right: 25rem;
+        top: 35vh;
+
+        .userCredentialsContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            min-width: 30rem;
+            height: 5rem;
+            background-color: lightgray;
+        }
+
+        .credentialsLabel {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .authdata {
+        font-size: 1.5rem;
+    }
+
+    .avatar {
+        font-size: 4rem;
+        color: white;
+        font-weight: bold;
+        transform: rotate(270deg);
+        position: absolute;
+        top: 8.5rem;
+        left: 0rem;
+        z-index: 100;
+    }
+
+    .profileHeadline {
+        font-size:2rem;
+        font-weight: bold;
+        position: absolute;
+        right: 60.75rem;
+        top: 30rem;
+    }
+
+    .greenishBackground {
+        position: absolute;
+        width: 40vw;
+        height: 100vh;
+        left: 0;
+        bottom: 0;
+        z-index: -10;
+    }
+
+    .navigateToHome {
+        position: absolute;
+        text-decoration: none;
+        transform: rotate(270deg);
+        color: black;
+        font-style: none;
+        right: 55vw;
+        top: 5rem;
+        font-size: 4rem;
+        font-weight: bold;
+        z-index: 1000000000;
+    }
+}

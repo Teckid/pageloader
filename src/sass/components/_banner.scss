@@ -1,6 +1,7 @@
 .banner {
   z-index: 100;
   position: relative;
+
   .banner-row {
     overflow: hidden;
     display: flex;
@@ -22,7 +23,7 @@
     }
     .row-title,
     .row-letter {
-      font-size: 28rem;
+      font-size: 25rem;
       font-weight: 500;
       position: relative;
       letter-spacing: -0.8rem;
@@ -60,7 +61,8 @@
       height: 160px;
       width: 160px;
       border-radius: 100%;
-      background: $white;
+      background: rgba(255,255,255,.35);
+      backdrop-filter: blur(20px);
       position: absolute;
       display: flex;
       align-items: center;
@@ -101,17 +103,20 @@
   }
   &.final {
     display: block;
-    top: -128px;
+    top: -125px;
     position: relative;
     width: 90%;
     margin: 0 auto;
-    z-index: -100;
+    z-index: 0;
     @media (max-width: $layout-breakpoint-xsmall) {
-      top: -56px;
+      top: -60px;
     }
     img {
       width: 100%;
-      max-width: 100%;
+    }
+    &.sizeReset {
+      width: 100%;
+      top: 50px;
     }
   }
 }

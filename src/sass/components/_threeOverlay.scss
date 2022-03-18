@@ -1,0 +1,130 @@
+.threeOverlayContainer {
+    position: absolute;
+    background: none;
+    z-index: 100;
+}
+
+.outterWrapper {
+    width: calc(40vw + 25px);
+    height: 100vh;
+    position: absolute;
+    border-left: 25px solid none;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    width: auto;
+    margin: 0rem 9.5rem;
+    height: 100%;
+}
+
+.blurDivider {
+    top: 25px;
+    height: 94.8%;
+    width: 20px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .1);
+    left: 77.5rem;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+}
+
+.animateDividerIn {
+    animation: showDivider 1.5s linear forwards;
+    @keyframes showDivider {
+        40% {
+            opacity: 0;
+        }
+
+        100% {
+            left: 77.5rem;
+            opacity: 1;
+        }
+    }
+}
+
+.textContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 60rem;
+    margin-left: 3rem;
+}
+
+.threeOverlayLogo {
+    align-self: flex-start;
+    justify-self: flex-start;
+    position: absolute;
+    top: 50px;
+    font-size: 3.75rem;
+    font-weight: bold;
+    color: black;
+}
+
+.headline {
+    font-size: 6rem;
+    height: 20rem;
+    font-weight: bold;
+}
+
+.subtextWrapper {
+    display: flex;
+    margin-top: -15rem;
+    flex-direction: column;
+}
+
+.subtext {
+    font-size: 1.85rem;
+}
+
+.animateIn {
+    animation: animate_in .9s ease-in-out forwards;
+    @keyframes animate_in {
+        0% {
+            opacity: 0;
+            left: -40vw;
+            top: -6vh;
+            height: 91vh;
+        }
+        35% {
+            top: -6vh;
+            left: 0vw;
+            opacity: 0.8;
+        }
+
+        60% {
+            top: 0vh;
+            opacity: 1;
+            height: 100vh;
+        }
+        100% {
+            opacity: 1;
+            height: 100vh;
+            top: 0vh;
+        }
+    }
+}
+
+.animateOut {
+    animation: animate_out 0.3s linear forwards;
+    @keyframes animate_out {
+        0% {
+            opacity: 1;
+            left: 0vw;
+        }
+        100% {
+            left: -20vw;
+            opacity: 0;
+            display: none;
+        }
+    }
+}

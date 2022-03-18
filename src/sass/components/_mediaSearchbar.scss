@@ -1,0 +1,91 @@
+.searchInputWrapper {
+    right: 2%;
+    top: 3.5%;
+    z-index: 101;
+}
+
+.animateOnHover {
+    border-radius: 50px;
+    right: 20%;
+    animation: none;
+    position: absolute;
+    animation: animateBackground .25s ease-in-out forwards;
+    
+    @keyframes animateBackground {
+        0% {
+    
+        }
+        100% {
+            width: 23rem;
+        }
+    }
+}
+
+.animateSearchButton {
+    animation: showSearchButton 2s linear forwards;
+    @keyframes showSearchButton {
+        0% {
+            opacity: 0;
+        }
+        66% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.animateOnLeave {
+    animation: spin 10s infinite ease-in-out;
+    
+    @keyframes deAnimateBackground {
+        0% {
+            width: 23rem;
+            height: 5rem;
+            position: relative;
+            background: linear-gradient(rgb(218, 175, 33), white);
+            border-radius: 100%;
+            box-shadow: 0rem .3rem 3px white;
+        }
+        100% {
+            width: 5rem;
+            height: 5rem;
+            position: relative;
+            background: linear-gradient(white, rgb(89, 33, 218) 90%);
+            border-radius: 50px;
+            box-shadow: 0rem .3rem 3px white;
+        }
+    }
+}
+
+.searchInput {
+    width: 7.5rem;
+    height: 7.5rem;
+    right: 12%;
+    font-size: 2rem;
+    color: #E5E7F7;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    background-color: rgba(106, 75, 177, 0.1);
+    backdrop-filter: blur(30px);
+    border-radius: 50px;
+    outline: none;
+    z-index: 100;
+    transition: width .25s ease-in-out;
+    cursor: none;
+
+    &:hover {
+        cursor: none;
+        width: 25rem;
+    }
+}
+
+.searchIcon {
+    position: absolute;
+    z-index: 101;
+    width: 50px;
+    font-size: 2rem;
+    color: #E5E7F7;
+    height: 50px;
+}

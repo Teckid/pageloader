@@ -1,8 +1,10 @@
 .header {
   font-size: 1.8rem;
-  height: 156px;
+  height: 160px;
+  width: 100vw;
   display: flex;
   justify-content: center;
+  position: relative;
   padding: 0 108px;
   color: $black;
   @media (max-width: $layout-breakpoint-medium) {
@@ -17,11 +19,13 @@
   .header-inner {
     width: 100%;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     .logo {
       font-weight: 700;
       font-size: 3.6rem;
+
       @media (max-width: $layout-breakpoint-medium) {
         font-size: 3.2rem;
         flex: 4;
@@ -32,34 +36,47 @@
         display: none;
       }
       display: flex;
+      left: 500px;
       align-items: center;
       justify-content: center;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+
       li {
         list-style: none;
         margin: 0 40px;
+
         a {
           text-decoration: none;
           color: $black;
           white-space: nowrap;
+          transition-duration: 300ms;
+          transition-property: color, font-size;
+          transition-delay: 0.1s;
+
+          &:hover {
+            font-size: 1.7rem;
+            color: $background;
+          }
         }
       }
     }
-    .contact {
-      @media (max-width: $layout-breakpoint-medium) {
-        flex: 1;
-      }
-      a {
-        color: $black;
-        text-decoration: none;
-        border-bottom: 2px solid $black;
-        padding-bottom: 12px;
-        white-space: nowrap;
-        @media (max-width: $layout-breakpoint-xsmall) {
-          border: none;
-        }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $background;
+      width: 7rem;
+      height: 7rem;
+      margin: 2rem;
+      border: none;
+      position: relative;
+      cursor: none;
+      z-index: 100;
+      border-radius: 0 0 50% 50%;
+
+      img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
       }
     }
     .hamburger-menu {

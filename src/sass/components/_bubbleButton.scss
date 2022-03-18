@@ -1,0 +1,97 @@
+.filter {
+    display: none;
+}
+
+.bubbleButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 7.5rem;
+    width: 30rem;
+    height: 15rem;
+    left: 0;
+    bottom: 15rem;
+}
+
+.overlayButton {
+    background-color: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
+    outline: none;
+    border: none;
+    z-index: 10;
+    width: 25rem;
+    height: 60px;
+    border-radius: 50px;
+    position: absolute;
+    color: rgba(112, 117, 184, 1);
+    font-weight: bolder;
+    font-size: 2rem;
+    box-shadow: 0px 10px 30px rgba(120, 108, 226, .1);
+}
+
+.gooey-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 60px;
+    border: none;
+    position: relative;
+    background: linear-gradient(rgb(237, 234, 255), white);
+    border-radius: 50px;
+    transition: background-color linear .2s;
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background: linear-gradient(#7A81D2, #7A81D2);
+    }
+
+    .bubbles {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin-left: 20px;
+
+        .bubble {
+            background-color: #b0b4e7;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1;
+            
+            @for $bubble from 1 through 10 {
+                &:nth-child(#{$bubble}) {
+                    $size: 25px;
+                    left: (random(100) + 15)+px;
+                    width: $size;
+                    height: $size;
+                    animation: move-#{$bubble} #{3 + $bubble*0.02}s infinite;
+                    animation-delay: #{$bubble*0.02}s;
+                }
+            }
+        }
+    }
+}
+
+@for $bubble from 1 through 10 {
+    @keyframes move-#{$bubble} {
+        0% {
+            transform: translate(0, 0);
+        }
+        99% {
+            transform: translate(0, -(random(80) + 50)+px);
+
+        }
+        100% {
+            transform: translate(0, 0);
+            opacity: 0;
+        }
+    }
+}

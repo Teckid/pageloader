@@ -11,6 +11,7 @@ body.loading {
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 1;
       &.image-1 {
         width: 400px;
         left: 16%;
@@ -19,6 +20,11 @@ body.loading {
           left: 4%;
           bottom: 28%;
         }
+      }
+      &.image-2 {
+        width: 400px;
+        left: 12%;
+        top: 10%;
       }
       &.image-3 {
         width: 300px;
